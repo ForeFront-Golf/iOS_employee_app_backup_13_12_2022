@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController">
+            <connections>
+                <outlet property="buttonGroupView" destination="h5A-Jy-TxA" id="iUu-rX-012"/>
+                <outlet property="listButton" destination="wfx-Iw-zcE" id="RUN-me-nsc"/>
+                <outlet property="mapButton" destination="fJL-Mw-RIo" id="58j-O3-bI1"/>
+                <outlet property="mapView" destination="Yc1-xo-BT5" id="vhr-RE-lbb"/>
+                <outlet property="menuTableView" destination="OfI-fz-duy" id="O9w-Jn-Xge"/>
+                <outlet property="tableView" destination="5uR-Ff-bia" id="8MQ-b8-iH8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="78" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5uR-Ff-bia">
+                    <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="d6r-gX-A5G">
+                        <rect key="frame" x="0.0" y="1374" width="1024" height="100"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ShW-CU-e7n"/>
+                        <outlet property="delegate" destination="-1" id="z1R-Cw-NG6"/>
+                    </connections>
+                </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yc1-xo-BT5" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="oAX-uM-GCT"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-Jy-TxA">
+                    <rect key="frame" x="446" y="1297" width="132" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfx-Iw-zcE">
+                            <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.054901960780000002" green="0.15686274510000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="icon_list_nvy.png"/>
+                            <state key="selected" image="icon_list_wht.png"/>
+                            <connections>
+                                <action selector="listButtonPressed" destination="-1" eventType="touchUpInside" id="N0i-Z3-wCt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-Mw-RIo">
+                            <rect key="frame" x="66" y="0.0" width="66" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="icon_map_nvy.png"/>
+                            <state key="selected" image="icon_map_wht.png"/>
+                            <connections>
+                                <action selector="mapButtonPressed" destination="-1" eventType="touchUpInside" id="BOl-eS-CVn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="l3Y-F6-QnS"/>
+                        <constraint firstAttribute="width" constant="132" id="uZS-id-0ea"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-fz-duy">
+                    <rect key="frame" x="0.0" y="34" width="1024" height="1332"/>
+                    <color key="backgroundColor" red="0.054901960780000002" green="0.15686274510000001" blue="0.23921568630000001" alpha="0.95874201642335766" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="f0d-4D-PC0"/>
+                        <outlet property="delegate" destination="-1" id="Fm0-z6-rww"/>
+                        <outletCollection property="gestureRecognizers" destination="FF3-mu-PVP" appends="YES" id="jly-Cg-5TW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5Cs-EP-vpU" firstAttribute="top" secondItem="Yc1-xo-BT5" secondAttribute="top" constant="20" id="4hj-kn-P7c"/>
+                <constraint firstItem="5Cs-EP-vpU" firstAttribute="trailing" secondItem="5uR-Ff-bia" secondAttribute="trailing" id="8X5-FX-guX"/>
+                <constraint firstItem="5uR-Ff-bia" firstAttribute="top" secondItem="5Cs-EP-vpU" secondAttribute="top" constant="44" id="B1s-Rb-npT"/>
+                <constraint firstItem="h5A-Jy-TxA" firstAttribute="centerX" secondItem="5Cs-EP-vpU" secondAttribute="centerX" id="BYq-jM-Jex"/>
+                <constraint firstItem="OfI-fz-duy" firstAttribute="top" secondItem="5Cs-EP-vpU" secondAttribute="top" constant="16" id="GDB-Dp-Ggu"/>
+                <constraint firstItem="5Cs-EP-vpU" firstAttribute="trailing" secondItem="OfI-fz-duy" secondAttribute="trailing" id="Jm0-a2-JJa"/>
+                <constraint firstItem="Yc1-xo-BT5" firstAttribute="leading" secondItem="5Cs-EP-vpU" secondAttribute="leading" id="KrJ-mc-byR"/>
+                <constraint firstItem="5Cs-EP-vpU" firstAttribute="bottom" secondItem="h5A-Jy-TxA" secondAttribute="bottom" constant="19" id="R0T-tt-uMW"/>
+                <constraint firstItem="5Cs-EP-vpU" firstAttribute="trailing" secondItem="Yc1-xo-BT5" secondAttribute="trailing" id="Wxn-b5-931"/>
+                <constraint firstAttribute="bottom" secondItem="Yc1-xo-BT5" secondAttribute="bottom" id="YHg-5i-FEK"/>
+                <constraint firstItem="OfI-fz-duy" firstAttribute="leading" secondItem="5Cs-EP-vpU" secondAttribute="leading" id="dgo-VA-mDF"/>
+                <constraint firstItem="OfI-fz-duy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="ev4-Ul-HHH"/>
+                <constraint firstItem="5uR-Ff-bia" firstAttribute="leading" secondItem="5Cs-EP-vpU" secondAttribute="leading" id="lQ5-T7-bQC"/>
+                <constraint firstAttribute="bottom" secondItem="OfI-fz-duy" secondAttribute="bottom" id="mf7-9W-Bzz"/>
+                <constraint firstAttribute="bottom" secondItem="5uR-Ff-bia" secondAttribute="bottom" id="pnK-jr-FRf"/>
+                <constraint firstItem="5uR-Ff-bia" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="rWg-iW-9xc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5Cs-EP-vpU"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="GDB-Dp-Ggu"/>
+                    <exclude reference="ev4-Ul-HHH"/>
+                    <exclude reference="B1s-Rb-npT"/>
+                    <exclude reference="rWg-iW-9xc"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="GDB-Dp-Ggu"/>
+                    <include reference="B1s-Rb-npT"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="ev4-Ul-HHH"/>
+                    <include reference="rWg-iW-9xc"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-25.5" y="-26"/>
+        </view>
+        <tapGestureRecognizer id="FF3-mu-PVP">
+            <connections>
+                <action selector="menuTableViewTapped:" destination="-1" id="gRy-wF-gtx"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="icon_list_nvy.png" width="22" height="22"/>
+        <image name="icon_list_wht.png" width="22" height="22"/>
+        <image name="icon_map_nvy.png" width="22" height="22"/>
+        <image name="icon_map_wht.png" width="22" height="22"/>
+    </resources>
+</document>
